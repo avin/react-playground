@@ -4,8 +4,7 @@ import Button from './Button';
 export default (): JSX.Element => {
   return (
     <div className="content">
-      <Button/>
+      <Button>Test</Button>
     </div>
   );
 };
-

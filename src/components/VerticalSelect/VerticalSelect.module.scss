@@ -1,0 +1,80 @@
+@import '~@/styles/variables';
+@import '~@/styles/mixins';
+
+$height: 40px;
+$width: 60px;
+$borderRadius: 8px;
+$backgroundColor: $light-gray3;
+
+.container {
+  position: relative;
+  display: inline-block;
+  width: $width;
+  height: $height;
+}
+
+.optionButton {
+  @include button-reset;
+
+  width: $width;
+  height: $height;
+  background-color: $light-gray3;
+  border-radius: $borderRadius;
+  transition: all 0.1s linear;
+  position: absolute;
+
+  &:hover{
+    background-color: $light-gray1;
+  }
+
+  &.additional {
+    z-index: 1;
+
+    &.enter {
+      left: 0 !important;
+      right: 0 !important;
+    }
+    &.exit {
+      left: 0 !important;
+      right: 0 !important;
+    }
+  }
+
+  &.active {
+    z-index: 2;
+    background-color: $blue3;
+    color: $white;
+
+    &:hover{
+      background-color: $blue2;
+    }
+  }
+}
+
+.background {
+  position: absolute;
+  z-index: 0;
+  height: $height;
+  background-color: $backgroundColor;
+  transition: all 0.1s linear;
+  border-radius: $borderRadius;
+
+  box-shadow: 0 0 0 4px $backgroundColor;
+
+  &.enter {
+    width: $width !important;
+    left: 0 !important;
+    opacity: 0;
+  }
+  &.enterActive {
+    opacity: 1;
+  }
+  &.exit {
+    width: $width !important;
+    left: 0 !important;
+    opacity: 1;
+  }
+  &.exitActive {
+    opacity: 0;
+  }
+}

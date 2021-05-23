@@ -1,3 +1,16 @@
 @import '~@/styles/variables';
 @import '~@/styles/mixins';
 
+.button {
+  @include button-reset();
+
+  color: $white;
+  background-color: $blue3;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.08s linear;
+
+  &:hover, &:active {
+    background-color: $blue1;
+  }
+}

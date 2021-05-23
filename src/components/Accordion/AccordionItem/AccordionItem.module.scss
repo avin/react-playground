@@ -1,0 +1,59 @@
+@import '~@/styles/variables';
+@import '~@/styles/mixins';
+
+.container {
+}
+
+.title {
+  font-weight: bold;
+  text-align: left;
+
+  h3 {
+    line-height: 130%;
+    margin: 0;
+  }
+}
+
+.content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.2s ease-in-out;
+
+  .open & {
+    height: auto;
+  }
+}
+
+.inner {
+  padding: 0 20px 20px 20px;
+}
+
+.head {
+  @include button-reset;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.control {
+  display: block;
+  margin-left: 20px;
+}
+
+.controlIcon {
+  $size: 18px;
+
+  width: $size;
+  height: $size;
+  margin-right: 4px;
+  color: $light-gray3;
+  transform: rotate(0deg);
+  transition: transform 0.08s linear;
+
+  .open & {
+    transform: rotate(45deg);
+  }
+}
