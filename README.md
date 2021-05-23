@@ -1,4 +1,4 @@
-# React Playground ![example workflow](https://github.com/avin/react-playground/actions/workflows/deploy-to-gh-pages.yml/badge.svg)
+# React Playground ![deploy-status](https://github.com/avin/react-playground/actions/workflows/deploy-to-gh-pages.yml/badge.svg)
 
 Experiments with [React](https://reactjs.org/)
 
