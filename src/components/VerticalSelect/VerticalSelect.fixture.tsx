@@ -18,7 +18,7 @@ export default (): JSX.Element => {
     <div className="content" style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
       <VerticalSelect options={options} value={value} onSelect={handleSelect} buttonWidth={60} />
 
-      <hr />
+      <div style={{ height: 20 }} />
 
       <VerticalSelect options={options} value={value} onSelect={handleSelect} buttonWidth={60} direction="right" />
     </div>
