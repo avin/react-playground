@@ -780,6 +780,136 @@ var ClickOutside = function ClickOutside(_ref) {
 
 /***/ }),
 
+/***/ "./src/components/Shader/Shader.fixture.tsx":
+/*!**************************************************!*\
+  !*** ./src/components/Shader/Shader.fixture.tsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Shader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Shader */ "./src/components/Shader/Shader.tsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var shader = "precision lowp float;\nuniform float iTime;\nuniform vec2 iResolution;\n\n#define hue(v)  ( .6 + .6 * cos( 6.3*(v)  + vec4(0,23,21,0)  ) )\n\nvoid main()\n{\n    vec2 uv =  floor(gl_FragCoord.xy/iResolution.x * 12.)/12.;\n    gl_FragColor = vec4(hue(uv.x + uv.y/3. + iTime*0.5).rgb, 1.);\n}\n";
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])("div", {
+    className: "content",
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_Shader__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      shader: shader,
+      width: 800,
+      height: 600
+    })
+  });
+});
+
+/***/ }),
+
+/***/ "./src/components/Shader/Shader.tsx":
+/*!******************************************!*\
+  !*** ./src/components/Shader/Shader.tsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var vertexShaderSrc = "attribute vec2 position;\nvoid main(void)\n{\n    gl_Position = vec4(position,0.0,1.0);\n}\n";
+
+var Shader = function Shader(_ref) {
+  var pixelShaderSrc = _ref.shader,
+      width = _ref.width,
+      height = _ref.height;
+  var canvasRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    var _canvasRef$current;
+
+    var gl = (_canvasRef$current = canvasRef.current) === null || _canvasRef$current === void 0 ? void 0 : _canvasRef$current.getContext('webgl');
+
+    if (!gl) {
+      return;
+    }
+
+    gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+  }, [width, height]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (!canvasRef.current) {
+      return;
+    }
+
+    var gl = canvasRef.current.getContext('webgl');
+
+    if (!gl) {
+      return;
+    }
+
+    var vertices = [-1, -1, -1, 1, 1, -1, 1, 1, -1, 1, 1, -1];
+    var buffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+    var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+
+    if (!vertexShader) {
+      return;
+    }
+
+    gl.shaderSource(vertexShader, vertexShaderSrc);
+    gl.compileShader(vertexShader);
+    var pixelShader = gl.createShader(gl.FRAGMENT_SHADER);
+
+    if (!pixelShader) {
+      return;
+    }
+
+    gl.shaderSource(pixelShader, pixelShaderSrc);
+    gl.compileShader(pixelShader);
+    var program = gl.createProgram();
+
+    if (!program) {
+      return;
+    }
+
+    gl.attachShader(program, vertexShader);
+    gl.attachShader(program, pixelShader);
+    gl.linkProgram(program);
+    gl.useProgram(program);
+    var coordinates = gl.getAttribLocation(program, 'position');
+    gl.vertexAttribPointer(coordinates, 2, gl.FLOAT, false, 0, 0);
+    gl.enableVertexAttribArray(coordinates);
+    var initTime = +new Date();
+
+    (function loop() {
+      window.requestAnimationFrame(loop);
+      var time = (+new Date() - initTime) * 0.001;
+      gl.uniform1f(gl.getUniformLocation(program, 'iTime'), time);
+      gl.uniform2f(gl.getUniformLocation(program, 'iResolution'), width, height);
+      gl.drawArrays(gl.TRIANGLES, 0, 6);
+    })(); // eslint-disable-next-line react-hooks/exhaustive-deps
+
+  }, []);
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__["jsx"])("canvas", {
+    ref: canvasRef,
+    width: width,
+    height: height
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Shader);
+
+/***/ }),
+
 /***/ "./src/components/Tabs/Tabs.fixture.tsx":
 /*!**********************************************!*\
   !*** ./src/components/Tabs/Tabs.fixture.tsx ***!

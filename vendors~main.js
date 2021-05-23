@@ -36130,6 +36130,7 @@ var rendererConfig = {
 var fixtures = {
   'src/components/Accordion/Accordion.fixture.tsx': __webpack_require__(/*! ./src/components/Accordion/Accordion.fixture.tsx */ "./src/components/Accordion/Accordion.fixture.tsx").default,
   'src/components/ClickOutside/ClickOutside.fixture.tsx': __webpack_require__(/*! ./src/components/ClickOutside/ClickOutside.fixture.tsx */ "./src/components/ClickOutside/ClickOutside.fixture.tsx").default,
+  'src/components/Shader/Shader.fixture.tsx': __webpack_require__(/*! ./src/components/Shader/Shader.fixture.tsx */ "./src/components/Shader/Shader.fixture.tsx").default,
   'src/components/Tabs/Tabs.fixture.tsx': __webpack_require__(/*! ./src/components/Tabs/Tabs.fixture.tsx */ "./src/components/Tabs/Tabs.fixture.tsx").default,
   'src/components/VerticalSelect/VerticalSelect.fixture.tsx': __webpack_require__(/*! ./src/components/VerticalSelect/VerticalSelect.fixture.tsx */ "./src/components/VerticalSelect/VerticalSelect.fixture.tsx").default,
   'src/components/YesNoSelect/YesNoSelect.fixture.tsx': __webpack_require__(/*! ./src/components/YesNoSelect/YesNoSelect.fixture.tsx */ "./src/components/YesNoSelect/YesNoSelect.fixture.tsx").default
