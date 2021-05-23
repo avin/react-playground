@@ -1215,7 +1215,11 @@ var options = [{
       value: value,
       onSelect: handleSelect,
       buttonWidth: 60
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("hr", {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_VerticalSelect__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+      style: {
+        height: 20
+      }
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])(_VerticalSelect__WEBPACK_IMPORTED_MODULE_2__["default"], {
       options: options,
       value: value,
       onSelect: handleSelect,
