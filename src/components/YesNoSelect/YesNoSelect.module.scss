@@ -1,0 +1,64 @@
+@import '~@/styles/variables';
+@import '~@/styles/mixins';
+
+$width: 60px;
+$height: 40px;
+$transition: all .2s ease-in-out;
+$border-radius: 8px;
+
+.container {
+  position: relative;
+  width: $width;
+  height: $height;
+  background-color: $blue3;
+  border-radius: $border-radius;
+  transition: $transition;
+  user-select: none;
+
+  &.open{
+    width: $width*2;
+  }
+}
+
+.button {
+  @include button-reset;
+
+  position: absolute;
+  width: $width;
+  height: $height;
+
+  left: 0;
+  top: 0;
+  z-index: 0;
+  background-color: $blue3;
+  color: white;
+  transition: $transition;
+  border-radius: $border-radius;
+
+  .open & {
+    left: $width;
+  }
+
+  &.active {
+    z-index: 1;
+    background-color: $white;
+    color: $black;
+
+    .open & {
+      left: 0;
+    }
+  }
+
+  //.open &:not(.active) {
+  //  &:after {
+  //    content: '';
+  //    position: absolute;
+  //    left: -10px;
+  //    top: 0;
+  //    width: 20px;
+  //    height: 100%;
+  //    background-color: $blue3;
+  //    z-index: -1;
+  //  }
+  //}
+}
