@@ -22,8 +22,8 @@ jobs:
           yarn run cosmos:export
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: cosmos-export
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: cosmos-export
+          enable_jekyll: true
