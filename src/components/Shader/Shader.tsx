@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import styles from './Shader.module.scss';
 
 const vertexShaderSrc = `\
 attribute vec2 position;
