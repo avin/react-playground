@@ -1,0 +1,23 @@
+@import '~@/styles/variables';
+@import '~@/styles/mixins';
+
+.content {
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+
+  &.enter {
+    opacity: 0;
+  }
+
+  &.enterActive {
+    opacity: 1;
+  }
+
+  &.exit {
+    opacity: 1;
+  }
+
+  &.exitActive {
+    opacity: 0;
+  }
+}

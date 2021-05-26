@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "craco start",
+		"dev": "npm run cosmos",
 		"build": "cross-env GENERATE_SOURCEMAP=false TSC_COMPILE_ON_ERROR=true craco build",
 		"test": "craco test",
 		"cosmos": "cross-env FAST_REFRESH=false cosmos",
