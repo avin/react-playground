@@ -36130,6 +36130,7 @@ var rendererConfig = {
 var fixtures = {
   'src/components/Accordion/Accordion.fixture.tsx': __webpack_require__(/*! ./src/components/Accordion/Accordion.fixture.tsx */ "./src/components/Accordion/Accordion.fixture.tsx").default,
   'src/components/ClickOutside/ClickOutside.fixture.tsx': __webpack_require__(/*! ./src/components/ClickOutside/ClickOutside.fixture.tsx */ "./src/components/ClickOutside/ClickOutside.fixture.tsx").default,
+  'src/components/Select/Select.fixture.tsx': __webpack_require__(/*! ./src/components/Select/Select.fixture.tsx */ "./src/components/Select/Select.fixture.tsx").default,
   'src/components/Shader/Shader.fixture.tsx': __webpack_require__(/*! ./src/components/Shader/Shader.fixture.tsx */ "./src/components/Shader/Shader.fixture.tsx").default,
   'src/components/Spinner/Spinner.fixture.tsx': __webpack_require__(/*! ./src/components/Spinner/Spinner.fixture.tsx */ "./src/components/Spinner/Spinner.fixture.tsx").default,
   'src/components/Tabs/Tabs.fixture.tsx': __webpack_require__(/*! ./src/components/Tabs/Tabs.fixture.tsx */ "./src/components/Tabs/Tabs.fixture.tsx").default,

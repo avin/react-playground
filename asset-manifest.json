@@ -7,6 +7,7 @@
     "vendors~main.js": "./vendors~main.js",
     "vendors~main.js.map": "./vendors~main.js.map",
     "_renderer.html": "./_renderer.html",
+    "static/media/chevron-down.svg": "./static/media/chevron-down.f4f13cb0.svg",
     "static/media/plus.svg": "./static/media/plus.d418a858.svg"
   },
   "entrypoints": [
