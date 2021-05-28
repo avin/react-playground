@@ -91,16 +91,44 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".AccordionItem_title__3Q9bK {\n  font-weight: bold;\n  text-align: left; }\n  .AccordionItem_title__3Q9bK h3 {\n    line-height: 130%;\n    margin: 0; }\n\n.AccordionItem_content__3fiIj {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.2s ease-in-out; }\n  .AccordionItem_open__3UMI5 .AccordionItem_content__3fiIj {\n    height: auto; }\n\n.AccordionItem_inner__2mwrO {\n  padding: 0 20px 20px 20px; }\n\n.AccordionItem_head__3aW9p {\n  padding: 0;\n  color: inherit;\n  font: inherit;\n  background-color: transparent;\n  border: none;\n  cursor: pointer;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-justify-content: space-between;\n          justify-content: space-between;\n  width: 100%;\n  padding: 20px 0; }\n\n.AccordionItem_control__1ZBtW {\n  display: block;\n  margin-left: 20px; }\n\n.AccordionItem_controlIcon__1WCMw {\n  width: 18px;\n  height: 18px;\n  margin-right: 4px;\n  color: #e1e8ed;\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n  transition: -webkit-transform 0.08s linear;\n  transition: transform 0.08s linear;\n  transition: transform 0.08s linear, -webkit-transform 0.08s linear; }\n  .AccordionItem_open__3UMI5 .AccordionItem_controlIcon__1WCMw {\n    -webkit-transform: rotate(45deg);\n            transform: rotate(45deg); }\n", "",{"version":3,"sources":["webpack://src/components/Accordion/AccordionItem/AccordionItem.module.scss","webpack://src/styles/_mixins.scss","webpack://src/styles/_colors.scss"],"names":[],"mappings":"AAMA;EACE,iBAAiB;EACjB,gBAAgB,EAAA;EAFlB;IAKI,iBAAiB;IACjB,SAAS,EAAA;;AAIb;EACE,SAAS;EACT,gBAAgB;EAChB,mCAAmC,EAAA;EAEnC;IACE,YAAY,EAAA;;AAIhB;EACE,yBAAyB,EAAA;;AAG3B;EC7BC,UAAU;EACV,cAAc;EACd,aAAa;EACb,6BAA6B;EAC7B,YAAY;EACZ,eAAe;ED2Bd,qBAAa;EAAb,aAAa;EACb,2BAAmB;UAAnB,mBAAmB;EACnB,sCAA8B;UAA9B,8BAA8B;EAC9B,WAAW;EACX,eAAe,EAAA;;AAGjB;EACE,cAAc;EACd,iBAAiB,EAAA;;AAGnB;EAGE,WAFW;EAGX,YAHW;EAIX,iBAAiB;EACjB,cEnCmB;EFoCnB,+BAAuB;UAAvB,uBAAuB;EACvB,0CAAkC;EAAlC,kCAAkC;EAAlC,kEAAkC,EAAA;EAElC;IACE,gCAAwB;YAAxB,wBAAwB,EAAA","sourcesContent":["@import '~@/styles/variables';\n@import '~@/styles/mixins';\n\n.container {\n}\n\n.title {\n  font-weight: bold;\n  text-align: left;\n\n  h3 {\n    line-height: 130%;\n    margin: 0;\n  }\n}\n\n.content {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.2s ease-in-out;\n\n  .open & {\n    height: auto;\n  }\n}\n\n.inner {\n  padding: 0 20px 20px 20px;\n}\n\n.head {\n  @include button-reset;\n\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  padding: 20px 0;\n}\n\n.control {\n  display: block;\n  margin-left: 20px;\n}\n\n.controlIcon {\n  $size: 18px;\n\n  width: $size;\n  height: $size;\n  margin-right: 4px;\n  color: $light-gray3;\n  transform: rotate(0deg);\n  transition: transform 0.08s linear;\n\n  .open & {\n    transform: rotate(45deg);\n  }\n}\n","@mixin button-reset {\n\tpadding: 0;\n\tcolor: inherit;\n\tfont: inherit;\n\tbackground-color: transparent;\n\tborder: none;\n\tcursor: pointer;\n}\n","$black: #10161a;\n\n$dark-gray1: #182026;\n$dark-gray2: #202b33;\n$dark-gray3: #293742;\n$dark-gray4: #30404d;\n$dark-gray5: #394b59;\n\n$gray1: #5c7080;\n$gray2: #738694;\n$gray3: #8a9ba8;\n$gray4: #a7b6c2;\n$gray5: #bfccd6;\n\n$light-gray1: #ced9e0;\n$light-gray2: #d8e1e8;\n$light-gray3: #e1e8ed;\n$light-gray4: #ebf1f5;\n$light-gray5: #f5f8fa;\n\n$white: #ffffff;\n\n$blue1: #0e5a8a;\n$blue2: #106ba3;\n$blue3: #137cbd;\n$blue4: #2b95d6;\n$blue5: #48aff0;\n\n$green1: #0a6640;\n$green2: #0d8050;\n$green3: #0f9960;\n$green4: #15b371;\n$green5: #3dcc91;\n\n$orange1: #a66321;\n$orange2: #bf7326;\n$orange3: #d9822b;\n$orange4: #f29d49;\n$orange5: #ffb366;\n\n$red1: #a82a2a;\n$red2: #c23030;\n$red3: #db3737;\n$red4: #f55656;\n$red5: #ff7373;\n\n$vermilion1: #9e2b0e;\n$vermilion2: #b83211;\n$vermilion3: #d13913;\n$vermilion4: #eb532d;\n$vermilion5: #ff6e4a;\n\n$rose1: #a82255;\n$rose2: #c22762;\n$rose3: #db2c6f;\n$rose4: #f5498b;\n$rose5: #ff66a1;\n\n$violet1: #5c255c;\n$violet2: #752f75;\n$violet3: #8f398f;\n$violet4: #a854a8;\n$violet5: #c274c2;\n\n$indigo1: #5642a6;\n$indigo2: #634dbf;\n$indigo3: #7157d9;\n$indigo4: #9179f2;\n$indigo5: #ad99ff;\n\n$cobalt1: #1f4b99;\n$cobalt2: #2458b3;\n$cobalt3: #2965cc;\n$cobalt4: #4580e6;\n$cobalt5: #669eff;\n\n$turquoise1: #008075;\n$turquoise2: #00998c;\n$turquoise3: #00b3a4;\n$turquoise4: #14ccbd;\n$turquoise5: #2ee6d6;\n\n$forest1: #1d7324;\n$forest2: #238c2c;\n$forest3: #29a634;\n$forest4: #43bf4d;\n$forest5: #62d96b;\n\n$lime1: #728c23;\n$lime2: #87a629;\n$lime3: #9bbf30;\n$lime4: #b6d94c;\n$lime5: #d1f26d;\n\n$gold1: #a67908;\n$gold2: #bf8c0a;\n$gold3: #d99e0b;\n$gold4: #f2b824;\n$gold5: #ffc940;\n\n$sepia1: #63411e;\n$sepia2: #7d5125;\n$sepia3: #96622d;\n$sepia4: #b07b46;\n$sepia5: #c99765;\n\n$intent-primary: $blue3;\n$intent-success: $green3;\n$intent-warning: $orange3;\n$intent-danger: $red3;\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".AccordionItem_title__3Q9bK {\n  font-weight: bold;\n  text-align: left; }\n  .AccordionItem_title__3Q9bK h3 {\n    line-height: 130%;\n    margin: 0; }\n\n.AccordionItem_content__3fiIj {\n  transition: all 0.20s ease-in-out; }\n\n.AccordionItem_inner__2mwrO {\n  padding: 0 20px 20px 20px; }\n\n.AccordionItem_head__3aW9p {\n  padding: 0;\n  color: inherit;\n  font: inherit;\n  background-color: transparent;\n  border: none;\n  cursor: pointer;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-justify-content: space-between;\n          justify-content: space-between;\n  width: 100%;\n  padding: 20px 0; }\n\n.AccordionItem_control__1ZBtW {\n  display: block;\n  margin-left: 20px; }\n\n.AccordionItem_controlIcon__1WCMw {\n  width: 18px;\n  height: 18px;\n  margin-right: 4px;\n  color: #e1e8ed;\n  -webkit-transform: rotate(0deg);\n          transform: rotate(0deg);\n  transition: -webkit-transform 0.08s linear;\n  transition: transform 0.08s linear;\n  transition: transform 0.08s linear, -webkit-transform 0.08s linear; }\n  .AccordionItem_open__3UMI5 .AccordionItem_controlIcon__1WCMw {\n    -webkit-transform: rotate(45deg);\n            transform: rotate(45deg); }\n", "",{"version":3,"sources":["webpack://src/components/Accordion/AccordionItem/AccordionItem.module.scss","webpack://src/styles/_mixins.scss","webpack://src/styles/_colors.scss"],"names":[],"mappings":"AAMA;EACE,iBAAiB;EACjB,gBAAgB,EAAA;EAFlB;IAKI,iBAAiB;IACjB,SAAS,EAAA;;AAIb;EACE,iCAAiC,EAAA;;AAGnC;EACE,yBAAyB,EAAA;;AAG3B;ECvBC,UAAU;EACV,cAAc;EACd,aAAa;EACb,6BAA6B;EAC7B,YAAY;EACZ,eAAe;EDqBd,qBAAa;EAAb,aAAa;EACb,2BAAmB;UAAnB,mBAAmB;EACnB,sCAA8B;UAA9B,8BAA8B;EAC9B,WAAW;EACX,eAAe,EAAA;;AAGjB;EACE,cAAc;EACd,iBAAiB,EAAA;;AAGnB;EAGE,WAFW;EAGX,YAHW;EAIX,iBAAiB;EACjB,cE7BmB;EF8BnB,+BAAuB;UAAvB,uBAAuB;EACvB,0CAAkC;EAAlC,kCAAkC;EAAlC,kEAAkC,EAAA;EAElC;IACE,gCAAwB;YAAxB,wBAAwB,EAAA","sourcesContent":["@import '~@/styles/variables';\n@import '~@/styles/mixins';\n\n.container {\n}\n\n.title {\n  font-weight: bold;\n  text-align: left;\n\n  h3 {\n    line-height: 130%;\n    margin: 0;\n  }\n}\n\n.content {\n  transition: all 0.20s ease-in-out;\n}\n\n.inner {\n  padding: 0 20px 20px 20px;\n}\n\n.head {\n  @include button-reset;\n\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  padding: 20px 0;\n}\n\n.control {\n  display: block;\n  margin-left: 20px;\n}\n\n.controlIcon {\n  $size: 18px;\n\n  width: $size;\n  height: $size;\n  margin-right: 4px;\n  color: $light-gray3;\n  transform: rotate(0deg);\n  transition: transform 0.08s linear;\n\n  .open & {\n    transform: rotate(45deg);\n  }\n}\n","@mixin button-reset {\n\tpadding: 0;\n\tcolor: inherit;\n\tfont: inherit;\n\tbackground-color: transparent;\n\tborder: none;\n\tcursor: pointer;\n}\n","$black: #10161a;\n\n$dark-gray1: #182026;\n$dark-gray2: #202b33;\n$dark-gray3: #293742;\n$dark-gray4: #30404d;\n$dark-gray5: #394b59;\n\n$gray1: #5c7080;\n$gray2: #738694;\n$gray3: #8a9ba8;\n$gray4: #a7b6c2;\n$gray5: #bfccd6;\n\n$light-gray1: #ced9e0;\n$light-gray2: #d8e1e8;\n$light-gray3: #e1e8ed;\n$light-gray4: #ebf1f5;\n$light-gray5: #f5f8fa;\n\n$white: #ffffff;\n\n$blue1: #0e5a8a;\n$blue2: #106ba3;\n$blue3: #137cbd;\n$blue4: #2b95d6;\n$blue5: #48aff0;\n\n$green1: #0a6640;\n$green2: #0d8050;\n$green3: #0f9960;\n$green4: #15b371;\n$green5: #3dcc91;\n\n$orange1: #a66321;\n$orange2: #bf7326;\n$orange3: #d9822b;\n$orange4: #f29d49;\n$orange5: #ffb366;\n\n$red1: #a82a2a;\n$red2: #c23030;\n$red3: #db3737;\n$red4: #f55656;\n$red5: #ff7373;\n\n$vermilion1: #9e2b0e;\n$vermilion2: #b83211;\n$vermilion3: #d13913;\n$vermilion4: #eb532d;\n$vermilion5: #ff6e4a;\n\n$rose1: #a82255;\n$rose2: #c22762;\n$rose3: #db2c6f;\n$rose4: #f5498b;\n$rose5: #ff66a1;\n\n$violet1: #5c255c;\n$violet2: #752f75;\n$violet3: #8f398f;\n$violet4: #a854a8;\n$violet5: #c274c2;\n\n$indigo1: #5642a6;\n$indigo2: #634dbf;\n$indigo3: #7157d9;\n$indigo4: #9179f2;\n$indigo5: #ad99ff;\n\n$cobalt1: #1f4b99;\n$cobalt2: #2458b3;\n$cobalt3: #2965cc;\n$cobalt4: #4580e6;\n$cobalt5: #669eff;\n\n$turquoise1: #008075;\n$turquoise2: #00998c;\n$turquoise3: #00b3a4;\n$turquoise4: #14ccbd;\n$turquoise5: #2ee6d6;\n\n$forest1: #1d7324;\n$forest2: #238c2c;\n$forest3: #29a634;\n$forest4: #43bf4d;\n$forest5: #62d96b;\n\n$lime1: #728c23;\n$lime2: #87a629;\n$lime3: #9bbf30;\n$lime4: #b6d94c;\n$lime5: #d1f26d;\n\n$gold1: #a67908;\n$gold2: #bf8c0a;\n$gold3: #d99e0b;\n$gold4: #f2b824;\n$gold5: #ffc940;\n\n$sepia1: #63411e;\n$sepia2: #7d5125;\n$sepia3: #96622d;\n$sepia4: #b07b46;\n$sepia5: #c99765;\n\n$intent-primary: $blue3;\n$intent-success: $green3;\n$intent-warning: $orange3;\n$intent-danger: $red3;\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"title": "AccordionItem_title__3Q9bK",
 	"content": "AccordionItem_content__3fiIj",
-	"open": "AccordionItem_open__3UMI5",
 	"inner": "AccordionItem_inner__2mwrO",
 	"head": "AccordionItem_head__3aW9p",
 	"control": "AccordionItem_control__1ZBtW",
-	"controlIcon": "AccordionItem_controlIcon__1WCMw"
+	"controlIcon": "AccordionItem_controlIcon__1WCMw",
+	"open": "AccordionItem_open__3UMI5"
+};
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/Spinner/styles.module.scss":
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-7-1!./node_modules/postcss-loader/src??postcss!./node_modules/resolve-url-loader??ref--5-oneOf-7-3!./node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-7-4!./src/components/Spinner/styles.module.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".styles_spinner__1dC-A {\n  display: -webkit-flex;\n  display: flex;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  overflow: visible;\n  vertical-align: middle; }\n  .styles_spinner__1dC-A svg {\n    display: block; }\n  .styles_spinner__1dC-A path {\n    fill-opacity: 0; }\n  .styles_spinner__1dC-A .styles_spinnerHead__2ODpn {\n    -webkit-transform-origin: center;\n            transform-origin: center;\n    transition: stroke-dashoffset 300ms linear;\n    stroke-linecap: round; }\n\n.styles_spinnerAnimation__19RIo {\n  -webkit-animation: styles_spinner-animation__3aOm7 750ms linear infinite;\n          animation: styles_spinner-animation__3aOm7 750ms linear infinite; }\n\n@-webkit-keyframes styles_spinner-animation__3aOm7 {\n  from {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  to {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n@keyframes styles_spinner-animation__3aOm7 {\n  from {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  to {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n", "",{"version":3,"sources":["webpack://src/components/Spinner/styles.module.scss"],"names":[],"mappings":"AAIA;EACE,qBAAa;EAAb,aAAa;EACb,2BAAmB;UAAnB,mBAAmB;EACnB,+BAAuB;UAAvB,uBAAuB;EACvB,iBAAiB;EACjB,sBAAsB,EAAA;EALxB;IAQI,cAAc,EAAA;EARlB;IAYI,eAAe,EAAA;EAZnB;IAgBI,gCAAwB;YAAxB,wBAAwB;IACxB,0CAAoD;IACpD,qBAAqB,EAAA;;AAOzB;EACE,wEAA4D;UAA5D,gEAA4D,EAAA;;AAG9D;EACE;IACE,+BAAuB;YAAvB,uBAAuB,EAAA;EAGzB;IACE,iCAAyB;YAAzB,yBAAyB,EAAA,EAAA;;AAN7B;EACE;IACE,+BAAuB;YAAvB,uBAAuB,EAAA;EAGzB;IACE,iCAAyB;YAAzB,yBAAyB,EAAA,EAAA","sourcesContent":["@import '~@/styles/variables';\n\n$duration: 150ms;\n\n.spinner {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: visible;\n  vertical-align: middle;\n\n  svg {\n    display: block;\n  }\n\n  path {\n    fill-opacity: 0;\n  }\n\n  .spinnerHead {\n    transform-origin: center;\n    transition: stroke-dashoffset ($duration * 2) linear;\n    stroke-linecap: round;\n  }\n\n  .spinnerTrack {\n  }\n}\n\n.spinnerAnimation {\n  animation: spinner-animation ($duration * 5) linear infinite;\n}\n\n@keyframes spinner-animation {\n  from {\n    transform: rotate(0deg);\n  }\n\n  to {\n    transform: rotate(360deg);\n  }\n}\n"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"spinner": "styles_spinner__1dC-A",
+	"spinnerHead": "styles_spinnerHead__2ODpn",
+	"spinnerAnimation": "styles_spinnerAnimation__19RIo",
+	"spinner-animation": "styles_spinner-animation__3aOm7"
 };
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -241,7 +269,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
 // Module
-___CSS_LOADER_EXPORT___.push([module.i, ".content {\n  padding: 20px;\n  background-color: white; }\n", "",{"version":3,"sources":["webpack://src/styles/cosmos.scss"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,uBAAuB,EAAA","sourcesContent":[".content {\n  padding: 20px;\n  background-color: white;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.i, ".content, .flex-content {\n  padding: 20px;\n  background-color: white; }\n\n.flex-content {\n  display: -webkit-flex;\n  display: flex; }\n  .flex-content > * + * {\n    margin-left: 20px; }\n", "",{"version":3,"sources":["webpack://src/styles/cosmos.scss"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,uBAAuB,EAAA;;AAGzB;EAEE,qBAAa;EAAb,aAAa,EAAA;EAFf;IAKI,iBAAiB,EAAA","sourcesContent":[".content {\n  padding: 20px;\n  background-color: white;\n}\n\n.flex-content {\n  @extend .content;\n  display: flex;\n\n  & > * + * {\n    margin-left: 20px;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -611,8 +639,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _AccordionItem_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_AccordionItem_module_scss__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
 /* harmony import */ var _svgr_webpack_svgo_titleProp_ref_icons_plus_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @svgr/webpack?-svgo,+titleProp,+ref!./icons/plus.svg */ "./node_modules/@svgr/webpack/lib/index.js?-svgo,+titleProp,+ref!./src/components/Accordion/AccordionItem/icons/plus.svg");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_WrappedUp_WrappedUp__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/components/WrappedUp/WrappedUp */ "./src/components/WrappedUp/WrappedUp.tsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -627,58 +657,32 @@ var AccordionItem = function AccordionItem(_ref) {
       content = _ref.content,
       onClick = _ref.onClick,
       open = _ref.open;
-  var measureRef = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])(null);
-  var contentRef = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])(null);
-  var changeHeightTimerRef = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])(null);
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
-    if (changeHeightTimerRef.current) {
-      clearTimeout(changeHeightTimerRef.current);
-    }
-
-    if (contentRef.current && measureRef.current) {
-      if (open) {
-        contentRef.current.style.height = "".concat(measureRef.current.clientHeight, "px");
-        changeHeightTimerRef.current = setTimeout(function () {
-          if (contentRef.current) {
-            contentRef.current.style.height = 'auto';
-          }
-        }, 200); // 200 is animation duration
-      } else {
-        contentRef.current.style.height = "".concat(measureRef.current.clientHeight, "px"); // wait change in DOM tree
-
-        void contentRef.current.offsetWidth;
-        contentRef.current.style.height = "0px";
-      }
-    }
-  }, [open]);
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("div", {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])("div", {
     className: Object(clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(_AccordionItem_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.container, 'accordion-item-container', Object(_home_runner_work_react_playground_react_playground_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _AccordionItem_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.open, open)),
-    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsxs"])("button", {
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsxs"])("button", {
       className: _AccordionItem_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.head,
       type: "button",
       onClick: onClick,
       "data-block-id": id,
       "data-state": open ? 'open' : 'closed',
-      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
         className: _AccordionItem_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.title,
-        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("h3", {
+        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("h3", {
           children: title
         })
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
         className: _AccordionItem_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.control,
-        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])(_svgr_webpack_svgo_titleProp_ref_icons_plus_svg__WEBPACK_IMPORTED_MODULE_4__["ReactComponent"], {
+        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_svgr_webpack_svgo_titleProp_ref_icons_plus_svg__WEBPACK_IMPORTED_MODULE_4__["ReactComponent"], {
           className: _AccordionItem_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.controlIcon
         })
       })]
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])(_components_WrappedUp_WrappedUp__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      open: open,
+      duration: 200,
       className: _AccordionItem_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.content,
-      ref: contentRef,
-      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
-        ref: measureRef,
-        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__["jsx"])("div", {
-          className: _AccordionItem_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.inner,
-          children: content
-        })
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__["jsx"])("div", {
+        className: _AccordionItem_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.inner,
+        children: content
       })
     })]
   });
@@ -936,6 +940,212 @@ var Shader = function Shader(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Shader);
+
+/***/ }),
+
+/***/ "./src/components/Spinner/Spinner.fixture.tsx":
+/*!****************************************************!*\
+  !*** ./src/components/Spinner/Spinner.fixture.tsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Spinner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Spinner */ "./src/components/Spinner/Spinner.tsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxs"])("div", {
+    className: "flex-content",
+    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_Spinner__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_Spinner__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      size: 100,
+      radius: 5
+    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__["jsx"])(_Spinner__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      radius: 20
+    })]
+  });
+});
+
+/***/ }),
+
+/***/ "./src/components/Spinner/Spinner.tsx":
+/*!********************************************!*\
+  !*** ./src/components/Spinner/Spinner.tsx ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _styles_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles.module.scss */ "./src/components/Spinner/styles.module.scss");
+/* harmony import */ var _styles_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_module_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+var PATH_LENGTH = 280;
+var MIN_SIZE = 10;
+var STROKE_WIDTH = 4;
+var MIN_STROKE_WIDTH = 16;
+
+var Spinner = function Spinner(_ref) {
+  var _ref$size = _ref.size,
+      size = _ref$size === void 0 ? 50 : _ref$size,
+      _ref$headColor = _ref.headColor,
+      headColor = _ref$headColor === void 0 ? '#000' : _ref$headColor,
+      _ref$trackColor = _ref.trackColor,
+      trackColor = _ref$trackColor === void 0 ? '#ddd' : _ref$trackColor,
+      className = _ref.className,
+      _ref$radius = _ref.radius,
+      R = _ref$radius === void 0 ? 45 : _ref$radius;
+  var spinnerTrack = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(function () {
+    return "M 50,50 m 0,-".concat(R, " a ").concat(R, ",").concat(R, " 0 1 1 0,").concat(R * 2, " a ").concat(R, ",").concat(R, " 0 1 1 0,-").concat(R * 2);
+  }, [R]);
+  var normalizedSize = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(function () {
+    return Math.max(MIN_SIZE, size);
+  }, [size]);
+  var realStrokeWidth = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(function () {
+    return Math.min(MIN_STROKE_WIDTH, STROKE_WIDTH * 100 / normalizedSize);
+  }, [normalizedSize]);
+  var strokeOffset = PATH_LENGTH - PATH_LENGTH * 0.25;
+  var viewBox = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(function () {
+    var radius = R + realStrokeWidth / 2;
+    var viewBoxX = (50 - radius).toFixed(2);
+    var viewBoxWidth = (radius * 2).toFixed(2);
+    return "".concat(viewBoxX, " ").concat(viewBoxX, " ").concat(viewBoxWidth, " ").concat(viewBoxWidth);
+  }, [R, realStrokeWidth]);
+  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_1__["default"])(_styles_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.spinner, className),
+    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("div", {
+      className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.spinnerAnimation,
+      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsxs"])("svg", {
+        width: normalizedSize,
+        height: normalizedSize,
+        strokeWidth: realStrokeWidth.toFixed(2),
+        viewBox: viewBox,
+        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("path", {
+          className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.spinnerTrack,
+          d: spinnerTrack,
+          stroke: trackColor
+        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__["jsx"])("path", {
+          className: _styles_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.spinnerHead,
+          d: spinnerTrack,
+          pathLength: PATH_LENGTH,
+          strokeDasharray: "".concat(PATH_LENGTH, " ").concat(PATH_LENGTH),
+          strokeDashoffset: strokeOffset,
+          stroke: headColor
+        })]
+      })
+    })
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Spinner);
+
+/***/ }),
+
+/***/ "./src/components/Spinner/styles.module.scss":
+/*!***************************************************!*\
+  !*** ./src/components/Spinner/styles.module.scss ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+            var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-7-1!../../../node_modules/postcss-loader/src??postcss!../../../node_modules/resolve-url-loader??ref--5-oneOf-7-3!../../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-7-4!./styles.module.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/Spinner/styles.module.scss");
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(content, options);
+
+
+if (true) {
+  if (!content.locals || module.hot.invalidate) {
+    var isEqualLocals = function isEqualLocals(a, b, isNamedExport) {
+  if (!a && b || a && !b) {
+    return false;
+  }
+
+  var p;
+
+  for (p in a) {
+    if (isNamedExport && p === 'default') {
+      // eslint-disable-next-line no-continue
+      continue;
+    }
+
+    if (a[p] !== b[p]) {
+      return false;
+    }
+  }
+
+  for (p in b) {
+    if (isNamedExport && p === 'default') {
+      // eslint-disable-next-line no-continue
+      continue;
+    }
+
+    if (!a[p]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+    var oldLocals = content.locals;
+
+    module.hot.accept(
+      /*! !../../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-7-1!../../../node_modules/postcss-loader/src??postcss!../../../node_modules/resolve-url-loader??ref--5-oneOf-7-3!../../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-7-4!./styles.module.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/Spinner/styles.module.scss",
+      function () {
+        content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-7-1!../../../node_modules/postcss-loader/src??postcss!../../../node_modules/resolve-url-loader??ref--5-oneOf-7-3!../../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-7-4!./styles.module.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/Spinner/styles.module.scss");
+
+              content = content.__esModule ? content.default : content;
+
+              if (typeof content === 'string') {
+                content = [[module.i, content, '']];
+              }
+
+              if (!isEqualLocals(oldLocals, content.locals)) {
+                module.hot.invalidate();
+
+                return;
+              }
+
+              oldLocals = content.locals;
+
+              update(content);
+      }
+    )
+  }
+
+  module.hot.dispose(function() {
+    update();
+  });
+}
+
+module.exports = content.locals || {};
 
 /***/ }),
 
