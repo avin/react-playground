@@ -15,13 +15,7 @@
 }
 
 .content {
-  height: 0;
-  overflow: hidden;
-  transition: height 0.2s ease-in-out;
-
-  .open & {
-    height: auto;
-  }
+  transition: all 0.20s ease-in-out;
 }
 
 .inner {

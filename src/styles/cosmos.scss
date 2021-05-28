@@ -2,3 +2,12 @@
   padding: 20px;
   background-color: white;
 }
+
+.flex-content {
+  @extend .content;
+  display: flex;
+
+  & > * + * {
+    margin-left: 20px;
+  }
+}

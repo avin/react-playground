@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import styles from './AccordionItem.module.scss';
 import cn from 'clsx';
 import { ReactComponent as PlusIcon } from './icons/plus.svg';
+import WrappedUp from '@/components/WrappedUp/WrappedUp';
 
 interface Props {
   open?: boolean;
@@ -12,32 +13,6 @@ interface Props {
 }
 
 const AccordionItem = ({ id, title, content, onClick, open }: Props): JSX.Element => {
-  const measureRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const changeHeightTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  useEffect(() => {
-    if (changeHeightTimerRef.current) {
-      clearTimeout(changeHeightTimerRef.current);
-    }
-
-    if (contentRef.current && measureRef.current) {
-      if (open) {
-        contentRef.current.style.height = `${measureRef.current.clientHeight}px`;
-        changeHeightTimerRef.current = setTimeout(() => {
-          if (contentRef.current) {
-            contentRef.current.style.height = 'auto';
-          }
-        }, 200); // 200 is animation duration
-      } else {
-        contentRef.current.style.height = `${measureRef.current.clientHeight}px`;
-        // wait change in DOM tree
-        void contentRef.current.offsetWidth;
-        contentRef.current.style.height = `0px`;
-      }
-    }
-  }, [open]);
-
   return (
     <div className={cn(styles.container, 'accordion-item-container', { [styles.open]: open })}>
       <button
@@ -55,11 +30,9 @@ const AccordionItem = ({ id, title, content, onClick, open }: Props): JSX.Elemen
         </div>
       </button>
 
-      <div className={styles.content} ref={contentRef}>
-        <div ref={measureRef}>
-          <div className={styles.inner}>{content}</div>
-        </div>
-      </div>
+      <WrappedUp open={open} duration={200} className={styles.content}>
+        <div className={styles.inner}>{content}</div>
+      </WrappedUp>
     </div>
   );
 };
