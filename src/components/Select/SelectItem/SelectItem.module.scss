@@ -1,0 +1,18 @@
+@import '~@/styles/variables';
+@import '~@/styles/mixins';
+
+.selectItem {
+  @include button-reset;
+  display: block;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+
+  &:hover {
+    background-color: $light-gray1;
+  }
+}
+
+.active {
+  font-weight: bold;
+}
