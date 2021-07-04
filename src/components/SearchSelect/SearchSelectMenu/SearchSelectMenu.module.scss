@@ -1,0 +1,23 @@
+@import '~@/styles/variables';
+@import '~@/styles/mixins';
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $light-gray1;
+}
+
+.option {
+  @include button-reset;
+
+  padding: 10px;
+
+  &:hover {
+    background-color: $light-gray1;
+  }
+}
+
+.searchInput {
+  padding: 10px;
+  border: 0;
+}
